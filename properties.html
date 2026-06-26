@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Properties | LuxuryEstates</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Premium real estate properties in Pune. Buy apartments, villas and commercial spaces with LuxuryEstates.">
+
+<meta name="keywords" content="real estate pune, flats for sale in pune, property dealer pune">
+
+<meta name="author" content="LuxuryEstates">
+
+<meta property="og:title" content="LuxuryEstates">
+<meta property="og:description" content="Find your dream property today">
+<meta property="og:type" content="website">
+</head>
+<body>
+<div id="loader">
+    <div class="spinner"></div>
+</div>
+<header class="navbar">
+    <div class="logo">LuxuryEstates</div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#">Properties</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <a href="contact.html" class="btn">Book Visit</a>
+</header>
+<section class="page-hero properties-hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>Our Properties</h1>
+        <p>Explore premium real estate opportunities</p>
+    </div>
+</section>
+<input
+    type="text"
+    id="searchInput"
+    placeholder="Search by name or location..."
+    onkeyup="searchProperties()"
+/>
+<section class="filters-section">
+    <div class="filters">
+
+        <select id="typeFilter">
+            <option value="all">All Types</option>
+            <option value="apartment">Apartment</option>
+            <option value="villa">Villa</option>
+            <option value="commercial">Commercial</option>
+        </select>
+
+        <select id="budgetFilter">
+            <option value="all">All Budgets</option>
+            <option value="low">Below 1 Cr</option>
+            <option value="high">Above 1 Cr</option>
+        </select>
+
+        <button class="btn" onclick="filterProperties()">Apply Filters</button>
+    </div>
+</section>
+<section class="featured-properties">
+    <div class="property-grid" id="propertyGrid">
+
+        <div class="property-card" data-type="apartment" data-budget="low">
+            <img src="assets/images/property1.jpg" alt="">
+            <div class="property-info">
+                <h3>Palm Residency</h3>
+                <p class="price">₹75 Lakhs</p>
+                <p>Apartment • Pune</p>
+                <a href="property-details.html" class="btn">View Details</a>
+            </div>
+        </div>
+
+        <div class="property-card" data-type="villa" data-budget="high">
+            <img src="assets/images/property2.jpg" alt="">
+            <div class="property-info">
+                <h3>Elite Villa</h3>
+                <p class="price">₹2.5 Cr</p>
+                <p>Villa • Mumbai</p>
+                <a href="property-details.html" class="btn">View Details</a>
+            </div>
+        </div>
+
+        <div class="property-card" data-type="commercial" data-budget="high">
+            <img src="assets/images/property3.jpg" alt="">
+            <div class="property-info">
+                <h3>Business Tower</h3>
+                <p class="price">₹1.8 Cr</p>
+                <p>Commercial • Pune</p>
+                <a href="property-details.html" class="btn">View Details</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<script src="js/property-data.js"></script>
+<script src="js/Properties.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
